@@ -1,16 +1,16 @@
-	.header, h3{
-		text-align: center;
-		background-color: blue;
-		color: white;
-		height: 70px;
-    font: ;
-	}
+.header, h3{
+   text-align: center;
+   background-color: blue;
+   color: white;
+   height: 70px;
+   font: ;
+}
 
-	.nav{
-		background-color: blue;
-		color: black;
-		text-align: center;
-	}
+.nav{
+  background-color: blue;
+  color: black;
+  text-align: center;
+}
 
 .footer{
   background-color: #;
