@@ -1,9 +1,24 @@
+<!--DOCTYPE html-->
+ 
 <html>
-<body>
+<head> 
+<script type=”text/javascript”>
+    function Enviar() {
+
+    var nome = document.getElementById("nomeid");
+
+    if (nome.value != "") {
+        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+    }
+
+}
+</script>
 <meta charset="utf-8">
 <form action="#" method="post">
 <link href="css/formulario.css" rel="stylesheet">
-<h1><center><font color="0000FF">Solicitação de Orçamento Assistência TI</center></font></h1>
+<h1><center><font color="0000FF">Solicitação de Orçamento Assistência TI</center></font></h1>    
+</head>       
+<body>
 
 <p><center><font color="red">Preparamos este formulário para você abrir um chamado de forma simples. Entraremos em contato o mais breve possível.</font></center></p>
 <form action="#" method="post">
@@ -30,7 +45,7 @@ ESTÁ COM PROBLEMAS NO SEU COMPUTADOR? QUAIS? POR FAVOR SELECIONE A OPÇÃO:
 <p>COMO DESEJA SER ATENDIDO?</p>
 <p>Selecione abaixo uma opção</p>
 
-<select name="Opção"><option value="SELECIONE"></option>
+<select name="Opção"><option value="SELECIONE" required="required"></option>
 <option value="TI, Local">Enviem um Técnico até o meu Local(mediante consulta de disponibilidade)</option> 
 <option value="Remoto">Acesso Remoto</option> 
 <option value="Levarei">Levarei meu Computador até vocês</option> 
@@ -38,37 +53,33 @@ ESTÁ COM PROBLEMAS NO SEU COMPUTADOR? QUAIS? POR FAVOR SELECIONE A OPÇÃO:
 
 <p>QUAL SEU NOME?</p>
 <p>Informe abaixo nome completo sem abreviações</p>
-<input type="Text" name="Nome" size="40">
+<input type="Text" name="Nome" size="40" id="nomeid" required="required">
   
 <p>EMPRESA</p>
 <p>Informe o nome da empresa, ou deixe em branco caso seja pessoa física</p>
-<input type="Text" name="Empresa" size="40"> 
+<input type="Text" name="Empresa" size="40" required="required"> 
 
 <p>TELEFONE COM DDD</p>
 <p>Exemplo: 55 99928-5918</p>
-<input type="Text" name="Telefone" size="40">
+<input type="Text" name="Telefone" size="40" required="required">
 
 <p>NÚMERO WHATSAPP</p>
 <p>Podemos entrar em contato pelo Whatsapp/Telegram para agilizar o atendimento</p>
-<input type="Text" name="WHATSAPP" size="40">
+<input type="Text" name="WHATSAPP" size="40" required="required">
 
 <p>EMAIL</p>
 <p>Informe abaixo seu e-mail para contato</p>
-<input type="Text" name="Nome" size="40">
+<input type="Text" name="Nome" size="40" required="required">
 
 <p>CIDADE/ENDEREÇO</p>
 <p>Exemplo: R Sul, 428 - Santo Ângelo RS</p>
-<input type="Text" name="Endereço" size="40">
+<input type="Text" name="Endereço" size="40" required="required">
 </fieldset>
 
-<input type="Submit" value="Enviar " onclick=msg();> 
+<input type="Submit" value="Enviar " onclick=Enviar();> 
 <input type="Reset" value="Limpar Dados">
 
 </form>
-
-<script>
-    function msg(){alert("Seu formulario foi enviado com sucesso! Entraremos em contato brevemente"); // mensagem q aparecerá no alert ! }
-</script>    
-
+   
 </html>
 </body>
