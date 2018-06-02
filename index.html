@@ -12,6 +12,10 @@
     }
 
 }
+   function Limpar(){
+    var erase = document.getElementById("Clean");
+     alert('Formulário apagado!');
+   }
 </script>
 <meta charset="utf-8">
 <form action="#" method="post">
@@ -75,7 +79,7 @@ ESTÁ COM PROBLEMAS NO SEU COMPUTADOR? QUAIS? POR FAVOR SELECIONE A OPÇÃO:
 </fieldset>
 
 <input type="Submit" value="Enviar " onclick=Enviar();> 
-<input type="Reset" value="Limpar Dados">
+<input type="Reset" id="Clean" value="Limpar Dados" onclick=Limpar();>
 
 </form>
    
