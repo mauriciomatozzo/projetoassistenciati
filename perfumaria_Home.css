@@ -3,7 +3,7 @@
    background-color: blue;
    color: white;
    height: 70px;
-   font: ;
+   font: verdana ;
 }
 
 .nav{
@@ -14,7 +14,7 @@
 
 .footer{
   background-color: #;
-  font: ;
+  font: verdana ;
 }
 
 .p{
@@ -22,4 +22,6 @@
 }
 .article{
    float: left;
+   font: verdana;
+   font-size: 14px;
 }
