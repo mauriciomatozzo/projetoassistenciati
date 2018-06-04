@@ -3,9 +3,6 @@
 <html>
 
 <head>
-
-</head>
-<body>
 <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -40,6 +37,10 @@
     }
 }
 </script>
+  
+</head>
+<body>
+
 
 
 </body>
