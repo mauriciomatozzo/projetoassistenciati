@@ -1,34 +1,5 @@
 <!DOCTYPE html>
-<?php
-// RECEBENDO OS DADOS PREENCHIDOS DO FORMULÁRIO!
-$nome = $_POST ["Name"];
-$oP1 = $_POST ["Op1"];
-$oP2 = $_POST["Op2"];
-$oP3 = $_POST["Op3"];
-$oP4 = $_POST["Op4"];
-$oP5 = $_POST["Op5"];
-$oP6 = $_POST["Op6"];
-$oP7 = $_POST["Op7"];
 
-
-//conectando com o localhost - mysql
-$conexao = mysql_connect("localhost", "root");
-if (!$conexao)
-    die("Erro de conexão com localhost, o seguinte erro ocorreu -> " . mysql_error());
-//conectando com a tabela do banco de dados
-$banco = mysql_select_db("clientes", $conexao);
-if (!$banco)
-    die("Erro de conexão com banco de dados, o seguinte erro ocorreu -> " . mysql_error());
-
-
-
-$query = "INSERT INTO `clientes` ( `nome` , `email` , `sexo` , `ddd` , `telefone` , `endereço` , `cidade` , `estado` , `bairro` , `país` , `login` , `senha` , `news` , `id` ) 
-VALUES ('$nome', '$email', '$sexo', '$ddd', '$tel', '$endereco', '$cidade', '$estado', '$bairro', '$pais', '$login', '$senha', '$news', '')";
-
-mysql_query($query, $conexao);
-
-echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
-?>
 /* RECEBENDO OS DADOS PREENCHIDOS DO FORMULÁRIO !
 $nome	= $_POST ["nome"];	//atribuição do campo "nome" vindo do formulário para variavel	
 $email	= $_POST ["email"];	//atribuição do campo "email" vindo do formulário para variavel
@@ -106,6 +77,36 @@ echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
         </script>
     </head>
     <body>
+        <?php
+// RECEBENDO OS DADOS PREENCHIDOS DO FORMULÁRIO!
+        $nome = $_POST ["Name"];
+        $oP1 = $_POST ["Op1"];
+        $oP2 = $_POST["Op2"];
+        $oP3 = $_POST["Op3"];
+        $oP4 = $_POST["Op4"];
+        $oP5 = $_POST["Op5"];
+        $oP6 = $_POST["Op6"];
+        $oP7 = $_POST["Op7"];
+
+
+//conectando com o localhost - mysql
+        $conexao = mysql_connect("localhost", "root");
+        if (!$conexao)
+            die("Erro de conexão com localhost, o seguinte erro ocorreu -> " . mysql_error());
+//conectando com a tabela do banco de dados
+        $banco = mysql_select_db("clientes", $conexao);
+        if (!$banco)
+            die("Erro de conexão com banco de dados, o seguinte erro ocorreu -> " . mysql_error());
+
+
+
+        $query = "INSERT INTO `clientes` ( `nome` , `email` , `sexo` , `ddd` , `telefone` , `endereço` , `cidade` , `estado` , `bairro` , `país` , `login` , `senha` , `news` , `id` ) 
+VALUES ('$nome', '$email', '$sexo', '$ddd', '$tel', '$endereco', '$cidade', '$estado', '$bairro', '$pais', '$login', '$senha', '$news', '')";
+
+        mysql_query($query, $conexao);
+
+        echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
+        ?>
     </body>
     <address>
 
