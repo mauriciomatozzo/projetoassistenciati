@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <head>
+        <title>computechmanu</title>
+        <style>
+            
+             .recuo {text-indent:4em
+       }
+       
+            {
+                background-color: black;
+                display: block;
+                margin: auto;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="topo.png" alt=""/>
+        <h1><i><center><big><font> A EMPRESA</big></center></i> <text> </h1>
+
+        <article><h1><p align="justify" class="text-info recuo"> A COMPUTECH MANUTENÇÃO INICIOU SEUS TRABALHOS NO ANO DE 2008, REALIZANDO OS SERVIÇOS DE MANUTENÇÃO EM TODA A CIDADE DE SANTO ANTÔNIO DAS MISSOES BEM COMO ATENDIMENTO A DOMICÍLIO.
+                    SUA SEDE É LOCALIZADA NA RUA RICARDO SANTIAGO DE GODOY Nº 3088. EMPRESA AUTÔNOMA, CRIADA PELO PROPRIETÁRIO MAURICIO MATOZZO ELA VEM SE ESPECIALIZANDO EM VÁRIOS TIPOS DE CONCERTOS BEM COMO
+                    OS DE SMARTHPHONES, ALÉM DA FORMATAÇÃO E INSTALAÇÃO DE PROGRAMAS EM TODO TIPO DE COMPUTADORES, ESTÁ TRAZENDO GRANDES NOVIDADES NA ÁREA DOS SMARTHPHONES.</p></article></h1>
+
+
+    <button> <class="btn"><a href="index.html"> VOLTAR</button>
+
+    </body>
+
+
