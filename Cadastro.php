@@ -1,41 +1,4 @@
 <!DOCTYPE html>
-
-/* RECEBENDO OS DADOS PREENCHIDOS DO FORMULÁRIO !
-$nome	= $_POST ["nome"];	//atribuição do campo "nome" vindo do formulário para variavel	
-$email	= $_POST ["email"];	//atribuição do campo "email" vindo do formulário para variavel
-$ddd	= $_POST ["ddd"];	//atribuição do campo "ddd" vindo do formulário para variavel
-$tel	= $_POST ["telefone"];	//atribuição do campo "telefone" vindo do formulário para variavel
-$endereco	= $_POST ["endereco"];	//atribuição do campo "endereco" vindo do formulário para variavel
-$cidade	= $_POST ["cidade"];	//atribuição do campo "cidade" vindo do formulário para variavel
-$estado	= $_POST ["estado"];	//atribuição do campo "estado" vindo do formulário para variavel
-$bairro = $_POST ["bairro"];	//atribuição do campo "bairro" vindo do formulário para variavel
-$pais	= $_POST ["pais"];	//atribuição do campo "pais" vindo do formulário para variavel
-$login	= $_POST ["login"];	//atribuição do campo "login" vindo do formulário para variavel
-$senha	= $_POST ["senha"];	//atribuição do campo "senha" vindo do formulário para variavel
-$news	= $_POST ["news"];	//atribuição do campo "news" vindo do formulário para variavel
-$sexo	= $_POST ["sexo"];	//atribuição do campo "sexo" vindo do formulário para variavel
-//Gravando no banco de dados !
-
-//conectando com o localhost - mysql
-$conexao = mysql_connect("localhost","root");
-if (!$conexao)
-die ("Erro de conexão com localhost, o seguinte erro ocorreu -> ".mysql_error());
-//conectando com a tabela do banco de dados
-$banco = mysql_select_db("clientes",$conexao);
-if (!$banco)
-die ("Erro de conexão com banco de dados, o seguinte erro ocorreu -> ".mysql_error());
-
-
-
-$query = "INSERT INTO `clientes` ( `nome` , `email` , `sexo` , `ddd` , `telefone` , `endereço` , `cidade` , `estado` , `bairro` , `país` , `login` , `senha` , `news` , `id` ) 
-VALUES ('$nome', '$email', '$sexo', '$ddd', '$tel', '$endereco', '$cidade', '$estado', '$bairro', '$pais', '$login', '$senha', '$news', '')";
-
-mysql_query($query,$conexao);
-
-echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";        
-?>
-*/
-
 <html>
     <head>
         <script>
@@ -87,20 +50,27 @@ echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
         $oP5 = $_POST["Op5"];
         $oP6 = $_POST["Op6"];
         $oP7 = $_POST["Op7"];
-
+        $opcao = $_POST["opcao"];
+        $Empresa = $_POST["Empresa"];
+        $TelFix = $_POST["TelFix"];
+        $whats = $_POST["whats"];
+        $email = $_POST["email"];
+        $city = $_POST["city"];
+        $Estado = $_POST["Estado"];
+        $Endereco = $_POST["Endereco"];
 
 //conectando com o localhost - mysql
         $conexao = mysql_connect("localhost", "root");
         if (!$conexao)
             die("Erro de conexão com localhost, o seguinte erro ocorreu -> " . mysql_error());
 //conectando com a tabela do banco de dados
-        $banco = mysql_select_db("clientes", $conexao);
+        $banco = mysql_select_db("cadastro", $conexao);
         if (!$banco)
             die("Erro de conexão com banco de dados, o seguinte erro ocorreu -> " . mysql_error());
 
 
 
-        $query = "INSERT INTO `clientes` ( `nome` , `email` , `sexo` , `ddd` , `telefone` , `endereço` , `cidade` , `estado` , `bairro` , `país` , `login` , `senha` , `news` , `id` ) 
+        $query = "INSERT INTO `clientes` ( `nome` , `email` , `Empresa` , `whats` , `TelFix` , `endereço` , `city` , `Estado` , `id` ) 
 VALUES ('$nome', '$email', '$sexo', '$ddd', '$tel', '$endereco', '$cidade', '$estado', '$bairro', '$pais', '$login', '$senha', '$news', '')";
 
         mysql_query($query, $conexao);
