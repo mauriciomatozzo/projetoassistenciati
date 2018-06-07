@@ -71,19 +71,11 @@
 
 
         $query = "INSERT INTO `clientes` ( `nome` , `email` , `Empresa` , `whats` , `TelFix` , `endereço` , `city` , `Estado` , `id` ) 
-VALUES ('$nome', '$email', '$sexo', '$ddd', '$tel', '$endereco', '$cidade', '$estado', '$bairro', '$pais', '$login', '$senha', '$news', '')";
+VALUES ('$nome', '$email', '$Empresa',$whats, $TelFix, $Endereco, $oP1, $oP2, $oP3,  $oP4, $oP5, $oP6, $oP7, $opcao, $city, '')";
 
         mysql_query($query, $conexao);
 
         echo "Seu cadastro foi realizado com sucesso!<br>Agradecemos a atenção.";
         ?>
     </body>
-    <address>
-
-    </address>
-
-    <footer>
-
-    </footer>
-
 </html>
