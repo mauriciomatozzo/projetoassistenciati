@@ -41,6 +41,27 @@
     </head>
     <body>
         <?php
+        $host = 'localhost';
+        $porta = 3306;
+        $usuario = 'root';
+        $senha = '';
+        $dbNome = 'Contato';
+
+
+        $pdo = new PDO("mysql:host=$host:$porta;
+                   dbname=$dbNome;charset=latin1", $usuario, $senha);
+
+
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $totalRegistrosInseridos = $pdo->exec(
+                "INSERT INTO cliente(Nome, Endereco)
+             VALUES('Everton', 'Rua Marechal Floriano');"
+        );
+
+        echo 'Total registros inseridos: ' . $totalRegistrosInseridos;
+        ?>
+        <?php
 // RECEBENDO OS DADOS PREENCHIDOS DO FORMULÁRIO!
         $nome = $_POST ["Name"];
         $oP1 = $_POST ["Op1"];
