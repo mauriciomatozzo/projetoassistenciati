@@ -6,5 +6,7 @@ $senha = '';
 $dbNome = 'dbassistencia';
 
 
-$pdo = new PDO("mysql:host=$host:$porta;
-                   dbname=$dbassistencia;charset=latin1", $usuario, $senha);
+ $mysqli = new mysqli($host, $porta, $usuario,$senha,$dbNome);
+ if($mysqli->connect_errno)
+    echo "Falha na conexão: (".$mysqli->connect_errno.") ".mysqli->connect_error;
+ ?>
