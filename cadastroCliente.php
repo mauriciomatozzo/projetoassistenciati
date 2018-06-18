@@ -1,7 +1,22 @@
 <?php include("conexao.php"); 
-if(isset($_POST[''])){
-    
-}
+
+if(isset($_POST['Enviar'])){
+    if(!isset($_SESSION))
+        session_start();
+    foreach($_POST as $chave=>$valor)
+        $_SESSION[$chave] = $valor;
+if(strlen($_SESSION['nome']) == 0)
+    $erro[] = "Preencha o nome.";
+
+if(strlen($_SESSION['fone']) == 0)
+    $erro[] = "Preencha o telefone.";
+
+if(strlen($_SESSION['nome']) == 0)
+    $erro[] = "Preencha o nome.";
+
+
+if(substr_count($_SESSION['email'], '@')!=1 || substr_count($_SESSION['email'], '.') < 1 ||
+    $erro[] = "Preencha o email corretamente";
 
 
 ?>
