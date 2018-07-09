@@ -5,8 +5,10 @@ $usuario = 'root';
 $senha = '';
 $dbNome = 'dbassistencia';
 
-
- $mysqli = new mysqli($host, $porta, $usuario,$senha,$dbNome);
- if($mysqli->connect_errno)
-    echo "Falha na conexão: (".$mysqli->connect_errno.") ".mysqli->connect_error;
- ?>
+try {
+    // Criando a classe de conexÃ£o PDO com o servidor Mysql
+    $connection = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+} catch (Exception $e) {
+    // Apresenta uma mensagem caso ocorra algum problema
+    throw new Exception('Ocorreu um erro ao executar o comando no banco de dados! ERRO: ' . $e->getMessage());
+}
