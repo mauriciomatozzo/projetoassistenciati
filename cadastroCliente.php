@@ -1,45 +1,3 @@
-<?php include("conexao.php"); 
-
-if(isset($_POST['Enviar'])){
-    if(!isset($_SESSION))
-        session_start();
-    foreach($_POST as $chave=>$valor)
-        $_SESSION[$chave] = $valor;
-if(strlen($_SESSION['nome']) == 0)
-    $erro[] = "Preencha o nome.";
-
-if(strlen($_SESSION['fone']) == 0)
-    $erro[] = "Preencha o telefone.";
-
-if(strlen($_SESSION['nome']) == 0)
-    $erro[] = "Preencha o nome.";
-
-
-if(substr_count($_SESSION['email'], '@')!=1 || substr_count($_SESSION['email'], '.') < 1 ||
-    $erro[] = "Preencha o email corretamente";
-
-
-?>
-<?php
-$host = 'localhost';
-$porta = 3306;
-$usuario = 'root';
-$senha = '';
-$dbNome = 'dbassistencia';
-
-
-$pdo = new PDO("mysql:host=$host:$porta;
-                   dbname=$dbassistencia;charset=latin1", $usuario, $senha);
-
-
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$conexao = $pdo->exec(
-        "INSERT INTO tbcliente(id, nome, fone, endereco, email, cpf)
-             VALUES($id, $nome, $fone, $endereco, $email, $cpf);"
-);
-
-?>
 <html>
 <head>
     <title>Cadastro</title>
@@ -47,7 +5,7 @@ $conexao = $pdo->exec(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <form action="recebe_cadastro_cliente.php?p=cadastrar" method="POST">
+    <form action="/recebe_cadastro_cliente.php" method="POST">
 
         <label for="nome"></label>
         <input name="nome" value="" required type="text">
@@ -91,8 +49,8 @@ $conexao = $pdo->exec(
 <p>Informe abaixo seu e-mail para contato</p>
 <input type="text" name="email" size="60" required="required" placeholder="Exemplo: shup@up.com">
 
-<p class="city_Adress">ENDEREÇO</p>
-<input type="Text" name="Endereco" size="40" required="required" placeholder="Exemplo: Santo Ângelo RS">
+<p class="city_Adress">ENDEREÃ‡O</p>
+<input type="Text" name="Endereco" size="40" required="required" placeholder="Exemplo: Santo Ã‚ngelo RS">
 CPF: <input type="Text" name="cpf" size="40" placeholder="031565959" -->
 
         <input type="submit" value="enviar" name="Enviar" onclick=Enviar();> 
